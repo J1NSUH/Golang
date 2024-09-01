@@ -27,17 +27,32 @@ func repeatMe(words ...string){
 }
 
 func superAdd(numbers ...int)int{
-for index, number := range numbers{
+	fmt.Println("-for1 start------------- ")
+	for index, number := range numbers{
 	fmt.Println(index, number)
-}
-for i:=0;i<len(numbers);i++{
+	}
+	fmt.Println("-for2 start------------- ")
+	for i:=0;i<len(numbers);i++{
 	fmt.Println(i)
-}
-total:=0
-for _,number := range numbers{
+	}
+	total:=0
+	fmt.Println("-for3 start------------- ")
+	for _,number := range numbers{
 	total += number
+	}
+	return total
 }
-return total
+
+func canIDrink(age int)bool{
+	return age >= 18
+}
+
+
+func canIDrinkInKorea(age int)bool{
+	if koreanAge := age+2;koreanAge<20{
+		return false
+	}
+	return true
 }
 
 func main() {
@@ -45,10 +60,16 @@ func main() {
 	totalLenght_1_3, _ :=lenAndUpper_1_3("nico")
 	fmt.Println(totalLenght_1_3)
 	repeatMe("jinsuh","nico","Lynn","test")
+	fmt.Println("-------------- ")
 	fmt.Println("1-4")
 	totalLenght_1_4, _ :=lenAndUpper_1_4("nico")
 	fmt.Println(totalLenght_1_4)
+	fmt.Println("-------------- ")
 	fmt.Println("1-5")
 	result:=superAdd(7,8,9,10,11,12)
 	fmt.Println(result)
+	fmt.Println("---------------")
+	fmt.Println("1-6")
+	fmt.Println(canIDrink(16))
+	fmt.Println(canIDrinkInKorea(16))
 }
