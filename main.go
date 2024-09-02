@@ -55,6 +55,28 @@ func canIDrinkInKorea(age int)bool{
 	return true
 }
 
+func canIDrinkinswitch(age int)bool{
+	switch {
+	case age < 10:
+		return false
+	case age == 18:
+		return true
+	case age > 50:
+		return false
+	}
+	return false
+}
+
+func canIDrinkinswitchInKorea(age int)bool{
+	switch koreanAge := age+2; koreanAge{
+	case 10:
+		return false
+	case 18:
+		return true
+	}
+	return false
+}
+
 func main() {
 	fmt.Println(multiply(2,2))
 	totalLenght_1_3, _ :=lenAndUpper_1_3("nico")
@@ -72,4 +94,8 @@ func main() {
 	fmt.Println("1-6")
 	fmt.Println(canIDrink(16))
 	fmt.Println(canIDrinkInKorea(16))
+	fmt.Println("---------------")
+	fmt.Println("1-7")
+	fmt.Print(canIDrinkinswitch(18))
+	fmt.Print(canIDrinkinswitchInKorea(18))
 }
