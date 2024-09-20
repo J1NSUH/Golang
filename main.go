@@ -98,4 +98,15 @@ func main() {
 	fmt.Println("1-7")
 	fmt.Print(canIDrinkinswitch(18))
 	fmt.Print(canIDrinkinswitchInKorea(18))
+	fmt.Println("---------------")
+	fmt.Println("1-8")
+	a:=2
+	b:=&a
+	fmt.Println(&a,b)
+	fmt.Println(&a,&b)
+	fmt.Println(&a,b)
+	fmt.Println(a,b)
+	fmt.Println(*b)
+	*b=20
+	fmt.Println(a)
 }
