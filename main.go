@@ -109,4 +109,10 @@ func main() {
 	fmt.Println(*b)
 	*b=20
 	fmt.Println(a)
+	fmt.Println("---------------")
+	fmt.Println("1-9")
+	names:= []string{"nico","lynn","dal"}
+	names = append(names,"flynn")
+	fmt.Println(names)
+
 }
